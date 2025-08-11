@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -f /home/otus/elasticsearck.yml /etc/elasticsearch/elasticsearch.yml
+cp -f /home/otus/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 cp -f /home/otus/jvm.options /etc/elasticsearch/jvm.options
 cp -f /home/otus/kibana.yml /etc/kibana/kibana.yml
 cp -f /home/otus/logstash.yml /etc/logstash/logstash.yml

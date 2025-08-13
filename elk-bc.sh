@@ -12,7 +12,7 @@ cp -f /home/otus/logstash-nginx-es.conf /etc/logstash/conf.d/logstash-nginx-es.c
 
 #Установка пароля для Elasticsearch
 
-/usr/share/elasticsearch/bin/elasticsearch-reate-enrollment-token -s kibana
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 
 #Вывод токена для Kibana
 

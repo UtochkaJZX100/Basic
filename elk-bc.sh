@@ -8,6 +8,8 @@ cp -f /home/otus/logstash-nginx-es.conf /etc/logstash/conf.d/logstash-nginx-es.c
 
 #Замена сохранённых конфигов сервисов
 
+systemctl restart elasticsearch.service
+
 /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 
 systemctl daemon-reload

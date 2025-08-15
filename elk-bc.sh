@@ -10,7 +10,12 @@ cp -f /home/otus/logstash-nginx-es.conf /etc/logstash/conf.d/logstash-nginx-es.c
 
 /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 
+systemctl daemon-reload
+systemctl enable --now elasticsearch.service
+
 #Установка пароля для Elasticsearch
+
+systemctl restart kibana.service
 
 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 
@@ -20,16 +25,13 @@ cp -f /home/otus/logstash-nginx-es.conf /etc/logstash/conf.d/logstash-nginx-es.c
 
 #Вывод кода верификации для Kibana
 
+systemctl enable --now logstash.service
+
 mkdir /etc/logstash/certs/ && cp /etc/elasticsearch/certs/http_ca.crt /etc/logstash/certs
 chown -R logstash:logstash /etc/logstash/certs/
 
+systemctl restart logstash.service
+
 #Добавление сертификата безопасности для Logstash с присвоением прав для чтения
-
-systemctl daemon-reload
-systemctl enable --now elasticsearch.service
-systemctl restart kibana
-systemctl enable --now logstash.service
-
-#Рестарт всех сервисов стека
 
 echo "ELK started"

@@ -21,10 +21,6 @@ systemctl restart kibana.service
 
 #Вывод токена для Kibana
 
-/usr/share/kibana/bin/kibana-verification-code
-
-#Вывод кода верификации для Kibana
-
 systemctl enable --now logstash.service
 
 mkdir /etc/logstash/certs/ && cp /etc/elasticsearch/certs/http_ca.crt /etc/logstash/certs

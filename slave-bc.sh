@@ -2,7 +2,7 @@
 
 cp -f /home/otus/mysqlds.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 
-#Замена сохранённого конфига
+#Замена сохранённого конфига сервиса
 
 mysql -u root -e STOP SLAVE;
 

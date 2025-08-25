@@ -17,7 +17,7 @@ systemctl enable --now elasticsearch.service
 
 #Установка пароля для Elasticsearch
 
-systemctl restart kibana.service
+systemctl restart kibana
 
 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 

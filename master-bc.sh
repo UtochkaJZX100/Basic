@@ -11,3 +11,5 @@ service mysql restart
 mysql -u root < /home/otus/master-bc.sql
 
 #Вызов выполнения в БД скрипта с командами
+
+echo "Master started"

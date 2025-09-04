@@ -9,3 +9,5 @@ systemctl restart nginx
 systemctl restart filebeat
 
 #Запуск сервисов
+
+echo "NGINX started"

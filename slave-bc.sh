@@ -11,3 +11,5 @@ service mysql restart
 mysql -u root < /home/otus/slave-bc.sql
 
 #Вызов скрипта с командами для исполнения в БД
+
+echo "Slave started"

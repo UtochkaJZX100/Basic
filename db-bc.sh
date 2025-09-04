@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STOP REPLICA
+mysql -e "STOP REPLICA"
 
 MYSQL="mysql --skip-column-names"
 
@@ -21,4 +21,4 @@ for db in $($MYSQL -e "SHOW DATABASES"); do
   done
 done
 
-START REPLICA
+mysql -e "START REPLICA"

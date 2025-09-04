@@ -7,3 +7,5 @@ cp -f /home/otus/index3.html /var/www/html/index.html
 systemctl restart apache2
 
 ##Запуск сервисов
+
+echo "Apache started"

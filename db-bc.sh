@@ -3,21 +3,19 @@
 mysql -e "STOP REPLICA"
 
 MYSQL="mysql --skip-column-names"
-
-# Получаем список баз данных
+#Пропуск названий столбцов
 for db in $($MYSQL -e "SHOW DATABASES"); do
-  # Пропускаем системные базы данных
+# Получение списка баз данных
   if [[ "$db" == "information_schema" || "$db" == "performance_schema" || "$db" == "mysql" || "$db" == "sys" ]]; then
     continue
   fi
-
-  # Создаем папку для базы данных
+# Пропуск системных баз данных
   mkdir -p "$db"
-
-  # Получаем список таблиц в базе данных
+# Создание директории для базы данных
   for table in $($MYSQL -e "SHOW TABLES FROM $db"); do
-    # Делаем дамп таблицы и архивируем
+# Получаем список таблиц в базе данных
     mysqldump "$db" "$table" | gzip -1 > "$db/$table.sql.gz"
+# Снятие дампа и последующая его архивация
   done
 done
 

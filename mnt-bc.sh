@@ -9,3 +9,4 @@ systemctl restart prometheus
 
 #Запуск сервисов
 
+echo "Monitoring started"

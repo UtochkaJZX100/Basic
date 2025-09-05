@@ -1,0 +1,29 @@
+#Раскомментарить команды в нужном сегменте в зависимости от целевого сервера и запустить скипт.
+
+
+
+
+#NGINX
+#apt install -y nginx
+#apt install -y prometheus-node-exporter
+#apt install -y prometheus-nginx-exporter
+#apt install -y default-jdk
+#echo "deb [trusted=yes] https://mirror.yandex.ru/mirrors/elastic/8/ stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+#apt update && apt -y install filebeat
+
+#Apache	
+#apt intall -y apache2
+
+#MySQL Master/Slave
+#apt install -y mysql-server-8.0
+
+#Monitoring
+#apt install prometheus
+#sudo apt-get install -y add user libfontconfig1 musl
+#wget https://dl.grafana.com/oss/release/grafana_12.0.2_amd64.deb
+#sudo dpkg-i grafana_12.0.2_amd64.deb
+
+#ELK
+#apt install -y default-jdk
+#echo "deb [trusted=yes] https://mirror.yandex.ru/mirrors/elastic/8/ stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+#apt update && apt -y install elasticsearch kibana logstash
